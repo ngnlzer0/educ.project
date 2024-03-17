@@ -1,1 +1,1 @@
-This repository is for my study assignments
+This repository is for my study labs
