@@ -48,7 +48,7 @@ void init(indexlist** head, indexlist** teil, int size)
 	}
 
 	indexlist* temp = new indexlist;
-	temp->num = 1 + rand() % 1;
+	temp->num =  1 + rand() % 1;
 	temp->right = (*teil);
 	temp->left = NULL;
 	(*teil)->left = temp;
@@ -92,7 +92,7 @@ void shortlist(indexlist** head, indexlist** teil)
 				(*head)->right = NULL;
 				start = (*head);
 			}
-			else
+			else if((*head)->left != NULL)
 			{
 				(*head)->left->right = (*head)->right;
 				(*head)->right->left = (*head)->left;
@@ -106,35 +106,33 @@ void shortlist(indexlist** head, indexlist** teil)
 	(*head) = start;
 }// from a full list to a short list (saport function for a task 1)
 
-void longlist(indexlist** head, indexlist** teil)
+void longlist(indexlist** head)
 {
-	indexlist* start = (*head);
+	indexlist* start = *head;
+
 	while (*head)
 	{
-		if ((*head)->left != NULL and (((*head)->index) + 1) != ((*head)->left->index))
+		indexlist* temp = new indexlist;
+		temp->num = 0;
+
+		if ((*head)->right == NULL and (*head)->index > 1)
 		{
-			indexlist* temp = new indexlist;
-			temp->num = 0;
-
-			if ((*head)->right == NULL and ((*head)->index) > 1)
-			{
-				temp->index = 1;
-				temp->left = (*head);
-				(*head)->right = temp;
-				(*head) = temp;
-				start = temp;
-			}
-			else
-			{
-				temp->index = (*head)->index + 1;
-
-				temp->left = (*head)->left;
-				temp->right = (*head);
-				(*head)->left->right = temp;
-				(*head)->left = temp;
-				(*head) = temp;
-
-			}
+			temp->index = 1;
+			temp->left = (*head);
+			temp->right = NULL;
+			(*head)->right = temp;
+			start = temp;
+			(*head) = temp;
+			continue;
+		}
+		if ((*head)->left != NULL and (*head)->index != ((*head)->left->index - 1))
+		{
+			temp->index = (*head)->index + 1;
+			temp->left = (*head)->left;
+			temp->right = (*head);
+			(*head)->left->right = temp;
+			(*head)->left = temp;
+			(*head) = temp;
 			continue;
 		}
 		(*head) = (*head)->left;
@@ -164,8 +162,22 @@ void initmat(matrix** headmat, matrix** teilmat, int size)
 		}
 		(*teilmat)->dawn = NULL;
 	}
+	
 }// create matrix for a size*size (part of task 2)
 
+/*void longsmat(matrix** headmat, matrix** teilmat, int size)
+{
+	matrix* start = (*headmat);
+	for (int i = 0; i < size; i++)
+	{
+		longlist(&((*headmat)->line));
+		(*headmat) = (*headmat)->dawn;
+	}
+	(*headmat) = start;
+}
+this function was supposed to convert the matrix to full, 
+but for some reason the wrong address is passed to this function
+*/
 void showmat(matrix* headmat)
 {
 	while (headmat)
@@ -195,7 +207,7 @@ int main()
 	shortlist(&head, &teil);
 	show(head, teil);
 	cout << "from a short list to full:" << endl;
-	longlist(&head, &teil);
+	longlist(&head);
 	show(head, teil);
 
 	matrix* headmat = NULL;
@@ -206,10 +218,7 @@ int main()
 	initmat(&headmat, &teilmat, 10);
 	showmat(headmat);
 
-	cout << "and in the end I would like to say that there is a small drawback in the sorting," << endl;
-	cout << "if the last element is 0, then the code breaks" << endl;
-	cout << "I'm writing to you in English because for some reason my compiler doesn't work with Cyrillic" << endl;
-	cout << "and longslist function have a litle problem, if the first element has an index other than 1, then adding it works strangely " << endl;
+	cout << "if the last element of the line is 0, then the code doesnt want to work" << endl;
 
 	system("pause");
 }
