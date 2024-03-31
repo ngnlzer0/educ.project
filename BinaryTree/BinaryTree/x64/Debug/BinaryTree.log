@@ -1,0 +1,3 @@
+﻿  Main.cpp
+C:\Git.repos\educ.project\BinaryTree\BinaryTree\Main.cpp(58,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  BinaryTree.vcxproj -> C:\Git.repos\educ.project\BinaryTree\x64\Debug\BinaryTree.exe

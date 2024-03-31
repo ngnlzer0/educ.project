@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git.repos\\educ.project\\BinaryTree\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{096ECF30-9440-42B6-9831-F86AF54EB8BD}|BinaryTree\\BinaryTree.vcxproj|C:\\Git.repos\\educ.project\\BinaryTree\\BinaryTree\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{096ECF30-9440-42B6-9831-F86AF54EB8BD}|BinaryTree\\BinaryTree.vcxproj|solutionrelative:BinaryTree\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vanal\\Downloads\\Telegram Desktop\\pi_12_28.03.2024.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "pi_12_28.03.2024.cpp",
+              "DocumentMoniker": "C:\\Users\\vanal\\Downloads\\Telegram Desktop\\pi_12_28.03.2024.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\Users\\vanal\\Downloads\\Telegram Desktop\\pi_12_28.03.2024.cpp",
+              "ToolTip": "C:\\Users\\vanal\\Downloads\\Telegram Desktop\\pi_12_28.03.2024.cpp",
+              "RelativeToolTip": "..\\..\\..\\Users\\vanal\\Downloads\\Telegram Desktop\\pi_12_28.03.2024.cpp",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAE8AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-31T17:20:14.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Git.repos\\educ.project\\BinaryTree\\BinaryTree\\Main.cpp",
+              "RelativeDocumentMoniker": "BinaryTree\\Main.cpp",
+              "ToolTip": "C:\\Git.repos\\educ.project\\BinaryTree\\BinaryTree\\Main.cpp",
+              "RelativeToolTip": "BinaryTree\\Main.cpp",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAAAEEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-31T17:15:52.362Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
