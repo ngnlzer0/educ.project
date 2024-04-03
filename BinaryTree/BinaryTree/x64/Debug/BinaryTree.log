@@ -1,3 +1,4 @@
 ﻿  Main.cpp
-C:\Git.repos\educ.project\BinaryTree\BinaryTree\Main.cpp(58,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Git.repos\educ.project\BinaryTree\BinaryTree\Main.cpp(107,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Git.repos\educ.project\BinaryTree\BinaryTree\Main.cpp(72,1): warning C4715: searchNum: значение возвращается не при всех путях выполнения
   BinaryTree.vcxproj -> C:\Git.repos\educ.project\BinaryTree\x64\Debug\BinaryTree.exe
