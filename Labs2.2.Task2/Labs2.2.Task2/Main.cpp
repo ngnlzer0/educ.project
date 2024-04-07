@@ -46,25 +46,50 @@ void Show(list* head, list* teil)
 
 void breaks(list** headm, list** teilm, list** headd, list** teild)
 {
-	do
+	if ((*headm)->num % 2 == 0)
 	{
-		if ((*headm)->num % 2 != 0)
+		do
 		{
-			if ((*headm)->right != (*teild))
+			if ((*headm)->num % 2 != 0)
 			{
-				(*headm)->right->left = (*headm)->left;
-				(*headm)->left->right = (*headm)->right;
+				if ((*headm)->right != (*teild))
+				{
+					(*headm)->right->left = (*headm)->left;
+					(*headm)->left->right = (*headm)->right;
+				}
+				else
+				{
+					(*teilm)->left = (*headm)->left;
+					(*headm)->left = (*teilm);
+				}
+				Add(headd, teild, (*headm)->num);
 			}
-			else
-			{
-				(*teilm)->left = (*headm)->left;
-				(*headm)->left = (*teilm);
-			}
-			Add(headd, teild, (*headm)->num);
-		}
-		(*headm) = (*headm)->left;
+			(*headm) = (*headm)->left;
 
-	} while ((*teilm)->left != (*headm));
+		} while ((*teilm)->left != (*headm));
+	}
+	else
+	{
+		do
+		{
+			if ((*headm)->num % 2 == 0)
+			{
+				if ((*headm)->right != (*teild))
+				{
+					(*headm)->right->left = (*headm)->left;
+					(*headm)->left->right = (*headm)->right;
+				}
+				else
+				{
+					(*teilm)->left = (*headm)->left;
+					(*headm)->left = (*teilm);
+				}
+				Add(headd, teild, (*headm)->num);
+			}
+			(*headm) = (*headm)->left;
+
+		} while ((*teilm)->left != (*headm));
+	}
 }
 
 
